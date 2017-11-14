@@ -69,7 +69,12 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "createjs-browserify": "^1.0.5",
+    "lodash.debounce": "^4.0.8",
+    "lodash.omit": "^4.5.0",
+    "lodash.partition": "^4.6.0",
     "prop-types": "^15.6.0",
-    "react-motion": "^0.5.2"
+    "react-motion": "^0.5.2",
+    "shallowequal": "^1.0.2"
   }
 }
