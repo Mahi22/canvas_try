@@ -24,20 +24,18 @@ export default class SpringGrid extends Container {
   draw() {
     this.shape = new createjs.Container();
     React.Children.map(this.props.children, (child) => {
-      // console.log(child);
+      console.log(child);
       let El = child.type;
       let newProps = {...child.props, stage: this.stage};
 
     if (!El.isEaselJSComponent && El) {
-        // El = new El(newProps, this.context);
-        // newProps = El.render().props;
-        // El = El.render().type;
-        // console.log('render here');
-      }
-
+        console.error('Unknow Component');
+    } else {
       const CreateJsElement = new El(newProps);
 
       this.shape.addChild(CreateJsElement.draw());
+    }
+
     });
     return this.shape;
   }
